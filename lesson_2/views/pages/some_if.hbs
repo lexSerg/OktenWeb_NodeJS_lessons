@@ -1,0 +1,51 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css"></link>
+    <title>Some_if</title>
+  </head>
+  <body>
+    <h1>Some if-else</h1>
+    {{#if isOk}}
+      <h3>Some text</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+        alias, iusto eveniet quod, iure amet dolorum temporibus atque fugit
+        blanditiis facilis nemo optio odit maiores molestias explicabo error
+        autem exercitationem.Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+        alias, iusto eveniet quod, iure amet dolorum temporibus atque fugit
+        blanditiis facilis nemo optio odit maiores molestias explicabo error
+        autem exercitationem.Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+        alias, iusto eveniet quod, iure amet dolorum temporibus atque fugit
+        blanditiis facilis nemo optio odit maiores molestias explicabo error
+        autem exercitationem.Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+        alias, iusto eveniet quod, iure amet dolorum temporibus atque fugit
+        blanditiis facilis nemo optio odit maiores molestias explicabo error
+        autem exercitationem.Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+        alias, iusto eveniet quod, iure amet dolorum temporibus atque fugit
+        blanditiis facilis nemo optio odit maiores molestias explicabo error
+        autem exercitationem. 
+      </p>
+      <p>By
+        <span 
+            style="margin: 0 1rem;
+                    font-size: 1.2rem;
+                    font-style: oblique;">
+            {{textAuthor}}
+        </span>
+      </p>
+    {{else}}  
+    <p>Other text in else block</p>
+    {{/if}}
+
+    <form action="/login" method="POST">
+        <input type="text" name="login"><br>
+        <input type="text" name="password">
+        <input type="submit" value="ok">
+    </form>
+  </body>
+  <script>
+      console.log('Some_if.hbs script!');
+  </script>
+</html>

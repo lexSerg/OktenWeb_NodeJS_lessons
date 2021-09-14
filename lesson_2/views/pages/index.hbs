@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    <h1>I'm a page on the Handlebars engine</h1>
+    {{!-- Аналог цикла, где this - это iter --}}
+    {{#each users}}
+        <div style="background-color: aqua;">
+            <div style="margin: .5rem auto;">
+                {{this.firstName}}
+                {{this.lastName}}
+                {{this.age}}
+            </div>
+        </div>
+    {{/each}}
+</body>
+</html>
