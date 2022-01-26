@@ -1,15 +1,12 @@
 const { Router } = require('express');
+const userscontroller = require('../controllers/users.controller');
+const { chechUserValidity } = require('../middlewares/user.middleware')
 
 const usersRouter = Router();
 
-usersRouter.get('/', (req, res) => {
-    res.render('users', {usersArr});
-});
-usersRouter.post('/', (req, res) => {
-    res.json('Users created');
-});
-usersRouter.delete('/', (req, res) => {
-    res.json('Users delete');
-});
+usersRouter.get('/', userscontroller.getUsers);
+usersRouter.get('/:userId', userscontroller.getUserbyId);
+usersRouter.post('/', chechUserValidity, userscontroller.createUser);
+usersRouter.delete('/', userscontroller.deleteUser);
 
 module.exports = usersRouter;

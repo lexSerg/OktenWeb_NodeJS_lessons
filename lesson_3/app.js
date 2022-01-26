@@ -1,12 +1,9 @@
 // !Study json method
-const usersArr = [
-    { name: 'Ivan', age: 17 },
-    { name: 'Olga', age: 15 },
-];
 
 const express = require('express');
 const exprsHbs = require('express-handlebars');
 const path = require('path');
+const usersArr = require('./data/users');
 
 const app = express();
 
@@ -22,6 +19,7 @@ app.engine('.hbs', exprsHbs({
 app.set('views', path.join(process.cwd(), 'views'));
 
 const usersRouter = require('./routes/users.router');
+
 app.use('/users', usersRouter);
 app.get('/', (req, res) => {
     res.render('main', { isOk: false, userName: 'Ivan' });
@@ -30,7 +28,7 @@ app.get('/', (req, res) => {
 app.post('/login', (req, res) => {
     const { name, age } = req.body;
     usersArr.push({ name, age });
-    res.redirect('/user');
+    res.redirect('/users');
 });
 
 app.listen(5000, () => {
